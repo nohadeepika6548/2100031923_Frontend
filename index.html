@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Form Builder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+        }
+
+        .form-builder-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .form-element {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        .form-element label {
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .form-element input[type="text"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .form-element input[type="checkbox"],
+        .form-element input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .remove-btn {
+            background-color: #1c4e80;
+            border: none;
+            color: white;
+            padding: 8px 12px;
+            cursor: pointer;
+            border-radius: 4px;
+            align-self: flex-end;
+            margin-top: 10px;
+        }
+
+        .remove-btn:hover {
+            background-color: #ff0000;
+        }
+
+        .form-builder-container button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #1c4e80;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .form-builder-container button:hover {
+            background-color: #1c4e80;
+        }
+
+        .new-question-form {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        .new-question-form label {
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .new-question-form input[type="text"],
+        .new-question-form select {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .options-container {
+            display: none;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        .options-container label {
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .options-container input[type="text"] {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .add-option-btn {
+            margin-bottom: 20px; 
+        }
+    body {
+        font-family: math;
+    }
+    .navbar {
+        display: flex;
+        background-color: #1c4e80;
+        overflow: hidden;
+    }
+    .navbar a {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+    }
+    
+</style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Task 1</a>
+        <a href="datatable.html">Task 2</a>
+        <a href="longestword.html">Task 3</a>  
+    </div>
+    <div class="container form-builder-container">
+        <h2>DYNAMIC FORM BUILDER</h2>
+        <div class="new-question-form">
+            <label for="question-text">Question:</label>
+            <input type="text" id="question-text" placeholder="Pose Your Question">
+            <label for="field-type">Field Type:</label>
+            <select id="field-type">
+                <option value="text">Text Field</option>
+                <option value="checkbox">Checkbox</option>
+                <option value="radio">Radio Button</option>
+            </select>
+            <div class="options-container" id="options-container">
+                <label for="option-text">Options:</label>
+                <div id="options-list"></div>
+                <input type="text" id="option-text" placeholder="Enter option text">
+                <button type="button" id="add-option" class="add-option-btn">Add Option</button>
+            </div>
+            <button id="add-question">Submit Your Question</button>
+        </div>
+    </div>
+    <div class="container" id="form-elements-container">
+        <h2>Generated Form</h2>
+    </div>
+    <script src="form-builder.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIGHLIGHT LONG WORDS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .highlight {
+            background-color: yellow;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #aca7a7;
+            border-radius: 8px;
+            background-color: #e4e1e1;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        textarea {
+            width: 96%;
+            height: 250px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        body {
+            font-family: math;
+        }
+        .navbar {
+            display: flex;
+            background-color: #1c4e80;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Task 1</a>
+        <a href="datatable.html">Task 2</a>
+        <a href="longestword.html">Task 3</a>
+    </div>
+    <h2><b><center>HIGHLIGHT LONG WORDS</center></b></h2>
+    <div class="container">
+        <textarea id="input-text" placeholder="ENTER YOUR TEXT HERE.."></textarea>
+        <div id="output-container">
+            <p id="output-paragraph"></p>
+        </div>
+    </div>
+    <script src="highlight.js"></script>
+</body>
+</html>
+

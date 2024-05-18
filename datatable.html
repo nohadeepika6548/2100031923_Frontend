@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTERACTIVE DATA TABLE</title>
+    <style>
+        body {
+            font-family: math;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #1c4e80;
+            overflow: hidden;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #1c4e80;
+        }
+
+        .table-container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            cursor: pointer;
+            background-color: #f9f9f9;
+        }
+
+        th.sort-asc::after {
+            content: ' ▲';
+        }
+
+        th.sort-desc::after {
+            content: ' ▼';
+        }
+
+        .filter-input {
+            margin-bottom: 20px;
+            padding: 10px;
+            width: calc(100% - 22px); 
+            font-size: 16px;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+
+        .pagination li {
+            margin: 0 5px;
+        }
+
+        .pagination button {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            background-color: #1c4e80;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .pagination button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        .pagination button:hover:not(:disabled) {
+            background-color: #1c4e80;
+        }
+
+        .table-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        #file-input {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Task 1</a> 
+        <a href="datatable.html">Task 2</a>
+        <a href="longestword.html">Task 3</a>
+    </div>
+    <div class="table-container" id="task1">
+        <h2>INTERACTIVE DATA TABLE</h2>
+        <center>
+        <input type="file" id="file-input" accept=".csv"></center>
+        <input type="text" id="filter-input" class="filter-input" placeholder="Customize">
+        <table id="data-table">
+            <thead>
+                <tr id="table-header">
+                </tr>
+            </thead>
+            <tbody id="table-body">
+            </tbody>
+        </table>
+        <ul class="pagination" id="pagination">
+        </ul>
+    </div>
+    <script src="data-table.js"></script>
+</body>
+</html>
